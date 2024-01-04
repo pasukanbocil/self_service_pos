@@ -2,69 +2,96 @@
 @section('maincontent')
     <section class="section">
         <div class="section-header">
-            <h1>Data Category</h1>
+            <h1>Data Categories</h1>
         </div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 col-md-6 col-lg-6">
                 <div class="card">
                     <div class="card-header">
-                        @if (session()->has('success'))
-                            <div class="alert alert-success alert-dismissible show fade">
-                                <div class="alert-body">
-                                    <button class="close" data-dismiss="alert">
-                                        <span>&times;</span>
-                                    </button>
-                                    {{ session('success') }}
-                                </div>
-                            </div>
-                        @endif
-                        @if (session()->has('loginError'))
-                            <div class="alert alert-danger alert-dismissible show fade">
-                                <div class="alert-body">
-                                    <button class="close" data-dismiss="alert">
-                                        <span>&times;</span>
-                                    </button>
-                                    {{ session('loginError') }}
-                                </div>
-                            </div>
-                        @endif
-                        <a href="/dashboard/products/create" class="btn btn-primary">Crate Data Product</a>
-                    </div <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-striped" id="table-2">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        No.
-                                    </th>
-                                    <th>Name </th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($categories as $category)
+                        <h4>Full Width</h4>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-md">
+                                <tbody>
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $category->category_name }}</td>
-                                        <td>
-                                            <a href="/dashboard/catefories/{{ $category->id }}/edit"
-                                                class="btn btn-warning border-0 btn-sm">Edit</a>
-                                            <form action="/categories/{{ $category->id }}" method="post" class="d-inline">
-                                                @method('delete')
-                                                @csrf
-                                                <button class="btn btn-danger border-0 btn-sm"
-                                                    onclick="return confirm('Anda Yakin Ingin Menghapus Data')"><span
-                                                        data-feather="x-circle"></span>Delete</button>
-                                            </form>
-                                        </td>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Created At</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
                                     </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Irwansyah Saputra</td>
+                                        <td>2017-01-09</td>
+                                        <td>
+                                            <div class="badge badge-success">Active</div>
+                                        </td>
+                                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Hasan Basri</td>
+                                        <td>2017-01-09</td>
+                                        <td>
+                                            <div class="badge badge-success">Active</div>
+                                        </td>
+                                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Kusnadi</td>
+                                        <td>2017-01-11</td>
+                                        <td>
+                                            <div class="badge badge-danger">Not Active</div>
+                                        </td>
+                                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Rizal Fakhri</td>
+                                        <td>2017-01-11</td>
+                                        <td>
+                                            <div class="badge badge-success">Active</div>
+                                        </td>
+                                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Isnap Kiswandi</td>
+                                        <td>2017-01-17</td>
+                                        <td>
+                                            <div class="badge badge-success">Active</div>
+                                        </td>
+                                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-footer text-right">
+                        <nav class="d-inline-block">
+                            <ul class="pagination mb-0">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1"><i
+                                            class="fas fa-chevron-left"></i></a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1 <span
+                                            class="sr-only">(current)</span></a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+        
     </section>
 @endsection

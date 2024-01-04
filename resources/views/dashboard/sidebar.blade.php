@@ -26,5 +26,15 @@
                 </li>
             </ul>
         </li>
+        <li class="menu-header">Order</li>
+        <li class="dropdown {{ Request::is('shops/*') ? 'active' : '' }}">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
+                <span>Shop</span></a>
+            <ul class="dropdown-menu">
+                <li class="{{ url()->current() == url('/shops/products') ? 'active' : '' }}">
+                    <a href="/shops/products" class="nav-link">Products</a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </aside>

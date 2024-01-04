@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="{{ asset('Assets/modules/jqvmap/dist/jqvmap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('Assets/modules/weather-icon/css/weather-icons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('Assets/modules/weather-icon/css/weather-icons-wind.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('Assets/modules/owlcarousel2/dist/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('Assets/modules/owlcarousel2/dist/owl.theme.default.min.css') }}">
+
     <link rel="stylesheet" href="{{ asset('Assets/modules/summernote/summernote-bs4.css') }}">
 
 
@@ -77,7 +76,6 @@
     <script src="{{ asset('Assets/modules/chart.min.js') }}"></script>
     <script src="{{ asset('Assets/modules/jqvmap/dist/jquery.vmap.min.js') }}"></script>
     <script src="{{ asset('Assets/modules/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
-    <script src="{{ asset('Assets/modules/owlcarousel2/dist/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('Assets/modules/summernote/summernote-bs4.js') }}"></script>
     <script src="{{ asset('Assets/modules/chocolat/dist/js/jquery.chocolat.min.js') }}"></script>
 

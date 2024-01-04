@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ShopsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,4 +42,16 @@ Route::put('/products/{id}', [ProductController::class, 'update']);
 Route::delete('/products/{id}', [ProductController::class, 'destroy']);
 
 
-Route::get('/dashboard/categories',[CategoryController::class,'index']);
+Route::get('/dashboard/categories', [CategoryController::class, 'index']);
+
+
+
+
+
+Route::get('/shops/products', [ShopsController::class, 'index']);
+
+
+Route::post('/carts', [CartController::class, 'addToCart']);
+Route::get('/carts/detail',[CartController::class,'index']);
+
+
