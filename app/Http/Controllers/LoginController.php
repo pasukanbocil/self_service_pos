@@ -16,7 +16,10 @@ class LoginController extends Controller
 
     public function authenticate(LoginFormRequest $request)
     {
-        $credentials = ['email' => $request->email, 'password' => $request->password];
+        $credentials = [
+            'email' => $request->email,
+            'password' => $request->password
+        ];
 
         if (auth()->attempt($credentials)) {
             $request->session()->regenerate();

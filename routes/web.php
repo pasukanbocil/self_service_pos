@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
@@ -28,3 +29,8 @@ Route::get('/dashboard', function () {
         'title' => 'Dashboard | Self Service Pos'
     ]);
 });
+
+
+Route::get('/dashboard/products', [ProductController::class, 'index']);
+Route::get('/dashboard/products/create', [ProductController::class, 'create']);
+Route::post('/products', [ProductController::class, 'store']);
