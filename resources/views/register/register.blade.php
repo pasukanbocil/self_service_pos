@@ -40,7 +40,7 @@
                         @csrf
                         <div class="row">
                             <div class="form-group col-8">
-                                <label for="name">First Name</label>
+                                <label for="name">Name</label>
                                 <input id="name" type="text" class="form-control" name="name" autofocus>
                             </div>
                         </div>

@@ -11,7 +11,7 @@
             <a href="/dashboard" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
         </li>
         <li class="menu-header">Master Data</li>
-        <li class="dropdown {{ Request::is('dashboard/products*') ? 'active' : '' }}">
+        <li class="dropdown {{ Request::is('dashboard/*') ? 'active' : '' }}">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                 <span>Master Data</span></a>
             <ul class="dropdown-menu">

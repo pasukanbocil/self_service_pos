@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -34,3 +35,9 @@ Route::get('/dashboard', function () {
 Route::get('/dashboard/products', [ProductController::class, 'index']);
 Route::get('/dashboard/products/create', [ProductController::class, 'create']);
 Route::post('/products', [ProductController::class, 'store']);
+Route::get('/dashboard/products/{id}/edit', [ProductController::class, 'edit']);
+Route::put('/products/{id}', [ProductController::class, 'update']);
+Route::delete('/products/{id}', [ProductController::class, 'destroy']);
+
+
+Route::get('/dashboard/categories',[CategoryController::class,'index']);

@@ -2,7 +2,7 @@
 @section('maincontent')
     <section class="section">
         <div class="section-header">
-            <h1>Data Product</h1>
+            <h1>Data Category</h1>
         </div>
         <div class="row">
             <div class="col-12">
@@ -31,34 +31,25 @@
                         <a href="/dashboard/products/create" class="btn btn-primary">Crate Data Product</a>
                     </div <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-striped" id="table-1">
+                        <table class="table table-striped" id="table-2">
                             <thead>
                                 <tr>
                                     <th>
                                         No.
                                     </th>
                                     <th>Name </th>
-                                    <th>Image</th>
-                                    <th>Price</th>
-                                    <th>Stock</th>
-                                    <th>Category</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($products as $product)
+                                @foreach ($categories as $category)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $product->name }}</td>
-                                        <td><img src="{{ asset('storage/' . $product->image) }}"
-                                                alt="Product Image"style="width: 150px; height: 150px;"></td>
-                                        <td>{{ $product->price }}</td>
-                                        <td>{{ $product->stock }}</td>
-                                        <td>{{ $product->category->category_name }}</td>
+                                        <td>{{ $category->category_name }}</td>
                                         <td>
-                                            <a href="/dashboard/products/{{ $product->id }}/edit"
+                                            <a href="/dashboard/catefories/{{ $category->id }}/edit"
                                                 class="btn btn-warning border-0 btn-sm">Edit</a>
-                                            <form action="/products/{{ $product->id }}" method="post" class="d-inline">
+                                            <form action="/categories/{{ $category->id }}" method="post" class="d-inline">
                                                 @method('delete')
                                                 @csrf
                                                 <button class="btn btn-danger border-0 btn-sm"
