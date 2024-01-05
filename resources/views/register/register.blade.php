@@ -53,12 +53,7 @@
                         <div class="row">
                             <div class="form-group col-8">
                                 <label for="password" class="d-block">Password</label>
-                                <input id="password" type="password" class="form-control pwstrength"
-                                    data-indicator="pwindicator" name="password">
-                                <div id="pwindicator" class="pwindicator">
-                                    <div class="bar"></div>
-                                    <div class="label"></div>
-                                </div>
+                                <input id="password" type="password" class="form-control pwstrength" name="password">
                             </div>
                         </div>
                         <div class="form-group">
