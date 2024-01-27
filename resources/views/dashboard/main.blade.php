@@ -85,7 +85,7 @@
     <script src="{{ asset('Assets/modules/jquery-ui/jquery-ui.min.js') }}"></script>
 
     <!-- Page Specific JS File -->
-    <script src="{{ asset('Assets/js/page/index.js') }}"></script>
+    {{-- <script src="{{ asset('Assets/js/page/index.js') }}"></script> --}}
     <script src="{{ asset('Assets/js/page/modules-datatables.js') }}"></script>
     <!-- Template JS File -->
     <script src="{{ asset('Assets/js/scripts.js') }}"></script>

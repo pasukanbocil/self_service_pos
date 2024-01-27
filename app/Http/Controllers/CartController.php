@@ -21,10 +21,16 @@ class CartController extends Controller
             'product_id' => 'required|exists:products,id'
         ]);
 
+        $product = \App\Models\Product::find($request->product_id);
+        $stock = $product->stock;
+
+        $product->stock = $stock - 1;
+        $product->save();
+
         Cart::create([
             'user_id' => auth()->id(),
             'product_id' => $request->product_id,
-            'qty' => 1  
+            'qty' => 1
         ]);
 
         return redirect('/carts/detail')->with('success', 'Product added to cart');
