@@ -21,11 +21,11 @@ class CartController extends Controller
             'product_id' => 'required|exists:products,id'
         ]);
 
-        $product = \App\Models\Product::find($request->product_id);
-        $stock = $product->stock;
+        // $product = \App\Models\Product::find($request->product_id);
+        // $stock = $product->stock;
 
-        $product->stock = $stock - 1;
-        $product->save();
+        // $product->stock = $stock - 1;
+        // $product->save();
 
         Cart::create([
             'user_id' => auth()->id(),

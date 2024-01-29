@@ -4,10 +4,9 @@
         <div class="section-header">
             <h1>Products Shops</h1>
         </div>
-
         <div class="section-body">
-            @foreach ($products as $product)
-                <div class="row">
+            <div class="row">
+                @foreach ($products as $product)
                     <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                         <article class="article">
                             <div class="article-header">
@@ -31,9 +30,8 @@
                             </div>
                         </article>
                     </div>
-
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
     </section>
 @endsection
