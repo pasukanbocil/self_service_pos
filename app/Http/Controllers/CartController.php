@@ -27,6 +27,12 @@ class CartController extends Controller
         // $product->stock = $stock - 1;
         // $product->save();
 
+        // $product = \App\Models\Product::find($request->product_id);
+        // $qty = $request->qty; // assuming the quantity is being sent in the request
+
+        // $product->stock = $product->stock - $qty;
+        // $product->save();
+
         Cart::create([
             'user_id' => auth()->id(),
             'product_id' => $request->product_id,
